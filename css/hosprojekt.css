@@ -319,7 +319,7 @@ nav a button:hover{
     width: 100%;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 25% 25% 25% 25%  ;
+    grid-template-rows: auto 100vh 100vh 25vh  ;
     grid-area:
     'section1'
     'section2'
@@ -398,4 +398,33 @@ nav a button:hover{
 
 .Jobb_info ul{
     row-gap: 10px;
+}
+
+.section1{
+    max-height: 50vh;
+    display: grid;
+    grid-template-areas: 25vh 25vh
+    'elon_musk'
+    'news_cards'
+     ;
+}
+
+.elon_musk{
+    grid-area: elon_musk;
+    display: grid;
+    grid-column: 50% 50%;
+    grid-template-areas: 
+    'elon_musk card'
+    ;
+}
+
+.elon_musk img{
+
+    width: 50%;
+    transform: translate(5%,5%);
+    border-radius: 5px;
+}
+
+.news_cards{
+    grid-area: news_cards;
 }
