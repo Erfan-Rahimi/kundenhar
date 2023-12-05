@@ -7,6 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    text-decoration: none;
+    color: #2980b9;
 }
 
 html{
@@ -21,18 +23,8 @@ html{
 body{
     background-color:  #2980b9;
     letter-spacing: 1px;
-    transition: background-color .25s, color .25s;
     width: 100%;
     height: 100vh;
-}
-
-
-ul{
-    list-style: none;
-}
-
-i{
-    font-size: medium;
 }
 
 .information{
@@ -194,18 +186,19 @@ aside{
     margin-top: 25%;
     margin-bottom: 20%;
     text-shadow:  6px 6px 9px  rgb(0, 0, 0);
-    color: #fff;
 }
 
 aside p{
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
+    color: #fff;
 }
 
 aside h1{
     text-align: center;
     font-size:70px;
+    color: #fff;
 }
 
 aside button{
@@ -233,6 +226,7 @@ aside button:hover{
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
+    list-style: none;
 }
 
 aside button img{
@@ -335,10 +329,73 @@ nav a button:hover{
 }
 
 .section4{
-    background-color: #0d293cdb;
+    grid-area: section4;
+    color: #2980b9;
+    background-color: #fff;
     display: grid;
     grid-template-columns: 40% 20% 20% 20%;
     grid-area:
     'ft1 ft2 ft3 ft4'
     ;
+}
+
+.ft{
+    padding-block: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.company_data{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.company_data ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.list_items ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 0;
+}
+
+.list_items ul a:hover{
+    color: goldenrod;
+}
+
+
+.list_items img{
+    width: 25px;
+    transform: translate(0%,30%);
+    padding-top: 5px;
+}
+
+.ft_head ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+
+.ft_info ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    list-style: none;
+}
+
+.TechTrek_info ul{
+    row-gap: 20px;
+}
+
+.Jobb_info ul{
+    row-gap: 10px;
 }
