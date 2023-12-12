@@ -21,6 +21,9 @@ html{
 }
 
 body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
     background-color:  #2980b9;
     letter-spacing: 1px;
     width: 100%;
@@ -247,6 +250,7 @@ aside button:hover img{
     border-radius: 10px;
 }
 .header-wrapper{
+    z-index: 1;
     background-color:  #fffffff0;
     position: fixed;
     width: 100%;
@@ -267,13 +271,14 @@ nav{
     padding-left: 300px;
 }
 
-nav li a{
+nav ul li{
+    display: flex;
     text-decoration: none;
     color: #2980b9;
     font-size: 15px; 
 }
 
-nav li a:hover{
+nav ul li a:hover{
     color: goldenrod;
     border-bottom: rgb(255, 255, 255) 1px solid;
 }
@@ -314,117 +319,28 @@ nav a button:hover{
 
 /* här_börjar_andra_sidan */
 
-.news_page{
+.section{
     padding-top: 80px;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    scroll-snap-align: start ;
+}
+
+#section1{
     display: grid;
-    grid-template-rows: auto 100vh 100vh 25vh  ;
-    grid-area:
-    'section1'
-    'section2'
-    'section3'
-    'section4'
-     ;
-}
-
-.section4{
-    grid-area: section4;
-    color: #2980b9;
-    background-color: #fff;
-    display: grid;
-    grid-template-columns: 40% 20% 20% 20%;
-    grid-area:
-    'ft1 ft2 ft3 ft4'
-    ;
-}
-
-.ft{
-    padding-block: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-
-.company_data{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-.company_data ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-.list_items ul{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    row-gap: 0;
-}
-
-.list_items ul a:hover{
-    color: goldenrod;
-}
-
-
-.list_items img{
-    width: 25px;
-    transform: translate(0%,30%);
-    padding-top: 5px;
-}
-
-.ft_head ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-}
-
-
-.ft_info ul{
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    list-style: none;
-}
-
-.TechTrek_info ul{
-    row-gap: 20px;
-}
-
-.Jobb_info ul{
-    row-gap: 10px;
-}
-
-.section1{
-    max-height: 50vh;
-    display: grid;
-    grid-template-areas: 25vh 25vh
-    'elon_musk'
-    'news_cards'
-     ;
-}
-
-.elon_musk{
-    grid-area: elon_musk;
-    display: grid;
-    grid-column: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
     grid-template-areas: 
-    'elon_musk card'
+    'mn as2'
     ;
 }
 
-.elon_musk img{
-
-    width: 50%;
-    transform: translate(5%,5%);
-    border-radius: 5px;
-}
-
-.news_cards{
-    grid-area: news_cards;
+#as2{
+    grid-area: as2;
+    background-color: #fff;
 }
