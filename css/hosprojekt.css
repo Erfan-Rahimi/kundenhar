@@ -1,39 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
 :root{
     --primary-background-color: #2980b9;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: #2980b9;
-}
-
 html{
     font-size: 90% ;
+    overflow-x: hidden;
+}
+
+
+body{
+    background-color:  #2980b9;
+    letter-spacing: 1px;
+}
+
+.header-wrapper{
+    height: 60px;
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: 60% 40% ;
+    padding: 0 1rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #2980b9;
+    transition: 0.2s;
+    font-size: 15px; 
+}
+
+nav a:hover{
+    color: goldenrod;
+}
+
+nav a button{
+    font-size: 16px;
+    color: #edf0f1;
+    padding: 9px 25px;
+    background-color: #2980b9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+nav a button:hover{
+    background-color: goldenrod;
+}
+
+.logo{
+    padding-left: 1rem;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo img{
+    border-radius: 200px;
+    width: 70px;
+    transform: translate(0%,-20%);
 }
 
 .container{
+    overflow: hidden;
     width: 100%;
-    min-height: 100vh;
-}
-
-body{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    background-color:  #2980b9;
-    letter-spacing: 1px;
-    width: 100%;
-    height: 100vh;
-}
-
-.information{
-    padding-top: 21.6px;
-    width: 100%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     display: grid;
     grid-template-columns: 50% 50% ;
     grid-template-areas: 
@@ -41,20 +87,18 @@ body{
     ;
 }
 
-.banner-1{
+ .banner-1{
     grid-area: slide-1;
     display: block;
     background-image: url(/Img/slide-1.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    position: relative; /* Add this line */
+    position: relative; 
     border-top-right-radius: 40%;
     border-bottom-right-radius: 40%;
     box-shadow:  15px 32px 64px rgba(0, 0, 0, 0.8);
 }
-
-
 
 .banner-2{
     grid-area: slide-1;
@@ -63,7 +107,7 @@ body{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    position: relative; /* Add this line */
+    position: relative; 
     border-top-right-radius: 40%;
     border-bottom-right-radius: 40%;
     box-shadow:  15px 32px 64px rgba(0, 0, 0, 0.8);
@@ -76,7 +120,7 @@ body{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    position: relative; /* Add this line */
+    position: relative;
     border-top-right-radius: 40%;
     border-bottom-right-radius: 40%;
     box-shadow:  15px 32px 64px rgba(0, 0, 0, 0.8);
@@ -89,7 +133,7 @@ body{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    position: relative; /* Add this line */
+    position: relative; 
     border-top-right-radius: 40%;
     border-bottom-right-radius: 40%;
     box-shadow:  15px 32px 64px rgba(0, 0, 0, 0.8);
@@ -248,99 +292,208 @@ aside button:hover img{
     position: absolute;
     margin-left: 14%;
     border-radius: 10px;
-}
-.header-wrapper{
-    z-index: 1;
-    background-color:  #fffffff0;
-    position: fixed;
+} 
+
+/*Here starts the news page*/
+
+.container2{
     width: 100%;
-    height: 80px;
-    z-index: 9999;
+    height: calc(100vh - 50px);
     display: grid;
-    grid-template-columns: 30% 70% ;
     grid-template-areas: 
-    'logo menu'
+    'section1'
+    'section2'
+    'section3'
     ;
 }
 
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    padding-left: 300px;
-}
-
-nav ul li{
-    display: flex;
-    text-decoration: none;
-    color: #2980b9;
-    font-size: 15px; 
-}
-
-nav ul li a:hover{
-    color: goldenrod;
-    border-bottom: rgb(255, 255, 255) 1px solid;
-}
-
-nav a button{
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
-    padding: 9px 25px;
-    background-color: #2980b9;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-nav a button:hover{
-    background-color: goldenrod;
-}
-
-.logo{
-    font-size: 20px;
-    color: white;
-    padding-left: 1rem;
-    align-items: center;
-    text-align: left;
-    padding-block: 1.5rem;
-}
-
-.logo img{
-    border-radius: 200px;
-    width: 100px;
-    position: absolute;
-    bottom: 10px;
-    transform: translate(50%,0%);
-}
-
-/* här_börjar_andra_sidan */
-
-.section{
-    padding-top: 80px;
+.section1{
+    display: grid;
+    min-height: 100vh;
     width: 100%;
-    height: 100vh;
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+    'row1'
+    'row2'
+    ;
+}
+
+.row1{
+    display: grid;
+    grid-template-columns: 59% 41%;
+    grid-auto-rows: 100%;
+    grid-template-areas: 
+    'card1 column2'
+    ;
+}
+
+.column{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+}
+
+.card{
+    /* background-color: rgba(240, 234, 234, 0.42); */
+    width: 450px;
+    height:fit-content;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
     color: #fff;
-    scroll-snap-align: start ;
 }
 
-#section1{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-template-areas: 
-    'mn as2'
-    ;
+
+
+.card span{
+    background-color: rgba(240, 234, 234, 0.42);
+    height: 0.1px;
+    width: 450px;
+    position: absolute;
+    transform: translate(10%,0%);
+    border-radius: 10px;
+    transform: translate(0, 110px);
 }
 
-#as2{
-    grid-area: as2;
-    background-color: #fff;
+.headline{
+    height: 50px;
+    transform: translate(0%, 50%);
+    color: #fff;
+    margin: 20px;
+}
+
+.headline2{
+    transform: translate(-0.5%,-220%);
+}
+
+#headline2_span{
+    width: 555px;
+}
+
+.headline span{
+    background-color: goldenrod;
+    height: 2px;
+    width: 400px;
+    position: absolute;
+    transform: translate(10%,0%);
+    border-radius: 10px;
+}
+
+.headline button{
+    background-color: goldenrod;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 1px;
+    transition: width 0.5s;
+    font-size: 15px;
+}
+
+.card_hero{
+    flex: 0 0 50%;
+    position: relative;
+}
+
+.card_img{
+    display: block;
+    width: 150px;
+    border-radius: 4px;
+    transform: translate(70%);
+    box-shadow: -15px 6px 19px  #111c22;
+}
+
+.card1_img{
+    display: block;
+    width: 520px;
+    border-radius: 10px;
+    transform: translate(20%,0%);
+    box-shadow: -15px 6px 19px  #111c22;
+}
+
+.card_layer{
+    display: flex;
+    flex-direction: row;
+    width: 520.2px;
+    height: 50%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(19, 18, 18, 0.8), rgba(0, 0, 0));
+    transform: translate(20%, -100%);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.card_layer h4{
+    transform: translate(5%, 80%);
+    cursor: pointer;
+}
+
+.card_layer h4:hover{
+    color: goldenrod;
+}
+
+.card_content{
+    flex: 1;
+    padding: 10px 35px 20px 10px;
+}
+
+.card1 button{
+    background-color: goldenrod;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 1px;
+    transition: width 0.5s;
+    font-size: 15px;
+}
+
+.card1 span{
+    background-color: goldenrod;
+    height: 2px;
+    width: 600px;
+    position: absolute;
+    transform: translate(10%,0%);
+    border-radius: 10px;
+}
+
+.row2{
+    grid-area:row2;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 480px;
+}
+
+.row2_card{
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    align-items: center;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.row2_card h3{
+    margin-bottom: 10px;
+}
+
+.row2_card img{
+    width: 250px;
+    height: 160px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: -15px 6px 19px  #111c22;
+}
+
+
+.section2{
+    grid-area: section2;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.section3{
+    grid-area: section3;
+    min-height: 100vh;
+    width: 100%;
 }
