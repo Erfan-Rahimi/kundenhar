@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/hosprojekt.css">
     <title>Document</title>
 </head>
 <body>
+    <!--Detta sida är kort sidan!-->
+    <!--Detta är navigation och headern-->
 <div class="header-wrapper">
     <header class="logo">
         <img src="/img/Logo.png" alt="">
@@ -20,79 +27,506 @@
     </nav>
 </div>
 
+<!--Valde att ha container3 för sidan då container och container2 var redan använt-->
 <div class="container3">
+    <!--Fortsatte bara med sections-->
     <section class="section4">
-        <div class="box">
-            
+        <!--Headline för review (Dock har vi inte span)-->
+        <div class="review_headline">
+            <h1>Most Recent Reviews</h1>
+        </div>
+        <!--Dessa är kort som visar reviews-->
+        <div class="review_cards">
+            <!--Återigen, arrow ikon från google icons-->
+        <div class="review_back">
+            <i class="material-icons">arrow_back_ios</i>
+        </div>
+        <!--Här börjar korten-->
+            <div class="review_card  review_card1">
+                <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p>Samsung Tv</p>
+            </div>
+                <div class="card__info">
+                    <!--En tumme upp som visar likes för olika reviews-->
+                    <div>
+                        <i class="material-icons">thumb_up <p>350</p></i>
+                    </div>
+                    <div>
+                        <a href="./" class="card__link">View Review</a>
+                    </div>
+                </div>
+            </div>
+            <div class="review_card  review_card2">
+                <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p>Iphone 15</p>
+            </div>
+                <div class="card__info">
+                    <div>
+                        <i class="material-icons">thumb_up <p>350</p></i>
+                    </div>
+                    <div>
+                        <a href="./" class="card__link">View Review</a>
+                    </div>
+                </div>
+            </div>
+            <div class="review_card  review_card3">
+                <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p>Macbook pro 2</p>
+            </div>
+                <div class="card__info">
+                    <div>
+                        <i class="material-icons">thumb_up <p>350</p></i>
+                    </div>
+                    <div>
+                        <a href="./" class="card__link">View Review</a>
+                    </div>
+                </div>
+            </div>
+            <div class="review_card  review_card4">
+                <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+                <p>ps5</p>
+            </div>
+                <div class="card__info">
+                    <div>
+                        <i class="material-icons">thumb_up <p>350</p></i>
+                    </div>
+                    <div>
+                        <a href="./" class="card__link">View Review</a>
+                    </div>
+                </div>
+            </div>
+            <!--Här slutar review korten och vi har en tumme upp igen-->
+            <div class="review_forward">
+            <i class="material-icons">arrow_forward_ios</i>
+        </div>
         </div>
     </section>
-    <section class="section5"></section>
-    <section class="section6"></section>
-    <footer>
-        <section class="section section3">
-        <div class="ft" id="ft1">
-            <div class="company_data">
+    <!--Section5 börjar här-->
+    <section class="section5">
+        <!--Titel till rekomenderade produkter-->
+        <h1 class="aside2_title">
+            RECOMMENDED TO BUY
+        </h1>
+        <!--Aside som visar olika kategorier-->
+        <aside class="aside2">
             <ul>
-            <li><a href="/index.html"> <h2 class="logo_footer">TechTrek</h2> </a></li>
-
-            <li><p> Your Hub for Tech News, Reviews, and Guides.<br> Stay informed, make informed choices.</p></li>
-
-        <li><div class="list_items">
-            <ul class="list social_media">
-                <li><a href="https://www.instagram.com/erfan_rah1/" target="_blank"><img src="/img/instagram.png" alt="instagram"> :instagram</a></li>
-                <li><a href="#"><img src="/img/facebook.png" alt="facebook">:facebook </a></li>
-                <li><a href="#"><img src="/img/pinterest.png" alt="pinterest">:pinterest </a></li>
+                <li><a href=""></a>TV'S</li>
+                <span></span>
+                <li><a href=""></a>Phones</li>
+                <span></span>
+                <li><a href=""></a>Pc components</li>
+                <span></span>
+                <li><a href=""></a>House gadgets</li>
+                <span></span>
+                <li><a href=""></a>Stocks</li>
+                <span></span>
             </ul>
-        </div></li>
+        </aside>
+        <!--Main cards som visar de rekommenderade produkter-->
+        <main class="main_cards">
+            <div class="main_card  main_card1">
+            <img src="/img/Tv.jpg" alt="" class="card__image">
+            <!--En liten tease från reviews-->
+            <div class="card__content">
+            <p>Lorem ipsum dolor sit
+                 amet consectetur adip
+                 isicing elit. Architec
+                 to voluptas molestiae 
+                 nostrum magni excepturi 
+                 minus soluta odit impedit 
+                 perspiciatis qatis 
+            </p>
 
-            </ul>
+            <p>Lorem ipsum, dolor sit amet 
+                consectetur adipisicing elit.
+                Dolore suscipit asperiores, necessitatibus 
+                atque hic beatae velit quos, magnam, minima
+                alias ipsum vitae
+            </p>
         </div>
-        </div>
-        <div class="ft" id="ft2">
-            <div class="ft_head kundservice">
-                <ul>
-            <li><h3>Kundservice</h3></li>
-            <li><div class="ft_info contact_info">
-                <ul>
-                    <li><p>📞: +0769466602 </p></li>
-                    <li>✉:<a href=""> TechTrek@gmail.com</a></li>
-                    <li>Adress:<a href=""> NTI Johanneberg</a></li>
-                </ul>
-            </div></li>
-            </ul>
+        
+        <!--Likes och länk till reviewn-->
+            <div class="card__info">
+                <div>
+                    <i class="material-icons">thumb_up <p>350</p></i>
+                </div>
+                <div>
+                    <a href="./" class="card__link">View Review</a>
+                </div>
             </div>
         </div>
-        <div class="ft" id="ft3">
-            <div class="ft_head This_is_TechTrek">
+        <div class="main_card  main_card2">
+            <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+
+            <p>Lorem ipsum dolor sit
+                 amet consectetur adip
+                 isicing elit. Architec
+                 to voluptas molestiae 
+                 nostrum magni excepturi 
+                 minus soluta odit impedit 
+                 perspiciatis qatis 
+            </p>
+
+            <p>Lorem ipsum, dolor sit amet 
+                consectetur adipisicing elit.
+                Dolore suscipit asperiores, necessitatibus 
+                atque hic beatae velit quos, magnam, minima
+                alias ipsum vitae
+            </p>
+        </div>
+            <div class="card__info">
+                <div>
+                    <i class="material-icons">thumb_up <p>350</p></i>
+                </div>
+                <div>
+                    <a href="./" class="card__link">View Review</a>
+                </div>
+            </div>
+        </div>
+        <div class="main_card  main_card2">
+            <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+
+            <p>Lorem ipsum dolor sit
+                 amet consectetur adip
+                 isicing elit. Architec
+                 to voluptas molestiae 
+                 nostrum magni excepturi 
+                 minus soluta odit impedit 
+                 perspiciatis qatis 
+            </p>
+
+            <p>Lorem ipsum, dolor sit amet 
+                consectetur adipisicing elit.
+                Dolore suscipit asperiores, necessitatibus 
+                atque hic beatae velit quos, magnam, minima
+                alias ipsum vitae
+            </p>
+        </div>
+            <div class="card__info">
+                <div>
+                    <i class="material-icons">thumb_up <p>350</p></i>
+                </div>
+                <div>
+                    <a href="./" class="card__link">View Review</a>
+                </div>
+            </div>
+        </div>
+        <div class="main_card  main_card3">
+            <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+
+            <p>Lorem ipsum dolor sit
+                 amet consectetur adip
+                 isicing elit. Architec
+                 to voluptas molestiae 
+                 nostrum magni excepturi 
+                 minus soluta odit impedit 
+                 perspiciatis qatis 
+            </p>
+
+            <p>Lorem ipsum, dolor sit amet 
+                consectetur adipisicing elit.
+                Dolore suscipit asperiores, necessitatibus 
+                atque hic beatae velit quos, magnam, minima
+                alias ipsum vitae
+            </p>
+        </div>
+            <div class="card__info">
+                <div>
+                    <i class="material-icons">thumb_up <p>350</p></i>
+                </div>
+                <div>
+                    <a href="./" class="card__link">View Review</a>
+                </div>
+            </div>
+        </div>
+        <div class="main_card  main_card4">
+            <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+
+            <p>Lorem ipsum dolor sit
+                 amet consectetur adip
+                 isicing elit. Architec
+                 to voluptas molestiae 
+                 nostrum magni excepturi 
+                 minus soluta odit impedit 
+                 perspiciatis qatis 
+            </p>
+
+            <p>Lorem ipsum, dolor sit amet 
+                consectetur adipisicing elit.
+                Dolore suscipit asperiores, necessitatibus 
+                atque hic beatae velit quos, magnam, minima
+                alias ipsum vitae
+            </p>
+        </div>
+            <div class="card__info">
+                <div>
+                    <i class="material-icons">thumb_up <p>350</p></i>
+                </div>
+                <div>
+                    <a href="./" class="card__link">View Review</a>
+                </div>
+            </div>
+        </div>
+        <div class="main_card  main_card5">
+            <img src="/img/Tv.jpg" alt="" class="card__image">
+            <div class="card__content">
+
+            <p>Lorem ipsum dolor sit
+                 amet consectetur adip
+                 isicing elit. Architec
+                 to voluptas molestiae 
+                 nostrum magni excepturi 
+                 minus soluta odit impedit 
+                 perspiciatis qatis 
+            </p>
+
+            <p>Lorem ipsum, dolor sit amet 
+                consectetur adipisicing elit.
+                Dolore suscipit asperiores, necessitatibus 
+                atque hic beatae velit quos, magnam, minima
+                alias ipsum vitae
+            </p>
+        </div>
+            <div class="card__info">
+                <div>
+                    <i class="material-icons">thumb_up <p>350</p></i>
+                </div>
+                <div>
+                    <a href="./" class="card__link">View Review</a>
+                </div>
+            </div>
+        </div>
+        </main>
+    </section>
+    <!--Section 6  som är exakt samma sak som section 5 men bara handlar om icke rekommenderade produkter-->
+    <section class="section6">
+        <h1 class="aside2_title">
+            NOT RECOMMENDED TO BUY
+        </h1>
+        <aside class="aside2">
+            <ul>
+                <li><a href=""></a>TV'S</li>
+                <span></span>
+                <li><a href=""></a>Phones</li>
+                <span></span>
+                <li><a href=""></a>Pc components</li>
+                <span></span>
+                <li><a href=""></a>House gadgets</li>
+                <span></span>
+                <li><a href=""></a>Stocks</li>
+                <span></span>
+            </ul>
+        </aside>
+<main class="main_cards2">
+    <div class="main_card2  main_card6">
+    <img src="/img/Tv.jpg" alt="" class="card__image">
+    <div class="card__content">
+
+    <p>Lorem ipsum dolor sit
+            amet consectetur adip
+            isicing elit. Architec
+            to voluptas molestiae 
+            nostrum magni excepturi 
+            minus soluta odit impedit 
+            perspiciatis qatis 
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet 
+        consectetur adipisicing elit.
+        Dolore suscipit asperiores, necessitatibus 
+        atque hic beatae velit quos, magnam, minima
+        alias ipsum vitae
+    </p>
+</div>
+    <div class="card__info">
+        <div>
+            <i class="material-icons">thumb_up <p>350</p></i>
+        </div>
+        <div>
+            <a href="./" class="card__link">View Review</a>
+        </div>
+    </div>
+</div>
+<div class="main_card  main_card7">
+    <img src="/img/Tv.jpg" alt="" class="card__image">
+    <div class="card__content">
+
+    <p>Lorem ipsum dolor sit
+            amet consectetur adip
+            isicing elit. Architec
+            to voluptas molestiae 
+            nostrum magni excepturi 
+            minus soluta odit impedit 
+            perspiciatis qatis 
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet 
+        consectetur adipisicing elit.
+        Dolore suscipit asperiores, necessitatibus 
+        atque hic beatae velit quos, magnam, minima
+        alias ipsum vitae
+    </p>
+</div>
+    <div class="card__info">
+        <div>
+            <i class="material-icons">thumb_up <p>350</p></i>
+        </div>
+        <div>
+            <a href="./" class="card__link">View Review</a>
+        </div>
+    </div>
+</div>
+<div class="main_card  main_card8">
+    <img src="/img/Tv.jpg" alt="" class="card__image">
+    <div class="card__content">
+
+    <p>Lorem ipsum dolor sit
+            amet consectetur adip
+            isicing elit. Architec
+            to voluptas molestiae 
+            nostrum magni excepturi 
+            minus soluta odit impedit 
+            perspiciatis qatis 
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet 
+        consectetur adipisicing elit.
+        Dolore suscipit asperiores, necessitatibus 
+        atque hic beatae velit quos, magnam, minima
+        alias ipsum vitae
+    </p>
+</div>
+    <div class="card__info">
+        <div>
+            <i class="material-icons">thumb_up <p>350</p></i>
+        </div>
+        <div>
+            <a href="./" class="card__link">View Review</a>
+        </div>
+    </div>
+</div>
+<div class="main_card  main_card9">
+    <img src="/img/Tv.jpg" alt="" class="card__image">
+    <div class="card__content">
+
+    <p>Lorem ipsum dolor sit
+            amet consectetur adip
+            isicing elit. Architec
+            to voluptas molestiae 
+            nostrum magni excepturi 
+            minus soluta odit impedit 
+            perspiciatis qatis 
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet 
+        consectetur adipisicing elit.
+        Dolore suscipit asperiores, necessitatibus 
+        atque hic beatae velit quos, magnam, minima
+        alias ipsum vitae
+    </p>
+</div>
+    <div class="card__info">
+        <div>
+            <i class="material-icons">thumb_up <p>350</p></i>
+        </div>
+        <div>
+            <a href="./" class="card__link">View Review</a>
+        </div>
+    </div>
+</div>
+<div class="main_card  main_card10">
+    <img src="/img/Tv.jpg" alt="" class="card__image">
+    <div class="card__content">
+
+    <p>Lorem ipsum dolor sit
+            amet consectetur adip
+            isicing elit. Architec
+            to voluptas molestiae 
+            nostrum magni excepturi 
+            minus soluta odit impedit 
+            perspiciatis qatis 
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet 
+        consectetur adipisicing elit.
+        Dolore suscipit asperiores, necessitatibus 
+        atque hic beatae velit quos, magnam, minima
+        alias ipsum vitae
+    </p>
+</div>
+    <div class="card__info">
+        <div>
+            <i class="material-icons">thumb_up <p>350</p></i>
+        </div>
+        <div>
+            <a href="./" class="card__link">View Review</a>
+        </div>
+    </div>
+</div>
+<div class="main_card  main_card11">
+    <img src="/img/Tv.jpg" alt="" class="card__image">
+    <div class="card__content">
+
+    <p>Lorem ipsum dolor sit
+            amet consectetur adip
+            isicing elit. Architec
+            to voluptas molestiae 
+            nostrum magni excepturi 
+            minus soluta odit impedit 
+            perspiciatis qatis 
+    </p>
+
+    <p>Lorem ipsum, dolor sit amet 
+        consectetur adipisicing elit.
+        Dolore suscipit asperiores, necessitatibus 
+        atque hic beatae velit quos, magnam, minima
+        alias ipsum vitae
+    </p>
+</div>
+    <div class="card__info">
+        <div>
+            <i class="material-icons">thumb_up <p>350</p></i>
+        </div>
+        <div>
+            <a href="./" class="card__link">View Review</a>
+        </div>
+    </div>
+</div>
+</main>
+    </section>
+    <!--Footer-->
+    <section class="section3">
+        <footer>
+        <!--Sociala media ikoner som jag fick från CDNJS-->
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+            <div class="footernav">
                 <ul>
-            <li><h3>This is TechTrek</h3></li>
-            <li><div class="ft_info TechTrek_info">
-                <ul>
-                    <li><a href="#">History</a></li>
+                <!--Detta är alla länkar som företagen har-->
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">About us</a></li>
-                    <li><a href="">Mission</a></li>
-                    <li><a href="">Group</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Jobs</a></li>
                 </ul>
-            </div></li>
-        </ul>
-        </div>
             </div>
-        <div class="ft" id="ft4">
-            <div class="ft_head Jobb">
-                <ul>
-            <li><h3>Jobb</h3></li>
-            <li><div class="ft_info Jobb_info">
-                <ul>
-                    <li><a href="#">Free roles</a></li>
-                    <li><a href="#">Salary</a></li>
-                    <li><a href="">Pay</a></li>
-                </ul>
-            </div></li>
-        </ul>
-        </div>
+            <!--Företags copywrite-->
+            <div class="copywrite">
+                <p>Copyright &copy;2023 Designed by <span class="designer">TechTrek</span></p>
             </div>
-</section>
-    </footer>
+        </footer>
+    </section>
 </div>
 
 </body>

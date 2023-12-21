@@ -4,179 +4,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="/css/hosprojekt.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
 </head>
 <body>
-<div class="header-wrapper">
-    <header class="logo">
-        <img src="/img/Logo.png" alt="">
-    </header>
-    <nav>
-    <a href="#">Home</a>
-    <a href="#">News</a>
-    <a href="#">Reviews</a>
-    <a class="button-nav" href="#"><button type="button">Contacte</button></a>
-    </nav>
-</div>
-      
-
+    <div class="header-wrapper">
+        <header class="logo">
+          <img src="/img/Logo.png" alt="">
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">News</a>
+            <a href="#">Reviews</a>
+            <a class="button-nav" href="#"><button type="button">Contacte</button></a>
+        </nav>
+      </div>
+      <!--Container2 eftersom container har redan används-->
 <div class="container2">
+    <!--Här börjar alla sections som sidan är delade i-->
     <section class="section1">
-    <div class="row row1">
-        <div class="card1">
-            <div class="headline">
-                <span></span>
-                <button type="button">Trending</button>
+        <!--Section 1 är delade i två stycken Rader eller Grid rows-->
+        <div class="row row1">
+            <!--Här börjar korter som section ett innehåller-->
+            <div class="card1">
+                <!--Headline är det som beskriver typen av nyhet-->
+                <div class="headline card1_headline">
+                    <!--Span är en linje som drar sig genom sidan men kan variera i längd-->
+                    <span></span>
+                    <button type="button">Trending</button>
+                </div>
+                <img src="/img/python.jpg" alt="Python">
+                <div class="card1_layer"><h4>New Python Update Availabe!</h4></div>
+                <div class="headline headline2">
+                    <span id="headline2_span"></span>
+                    <button type="button">Recent</button>
+                </div>
             </div>
-            <img src="/img/python.jpg" alt="" class="card1_img">
-            <div class="card_layer"><h4>New Python Update Availabe!</h4></div>
-        </div>
-        <div class="column2">
-            <div class="headline">
+            <!--Här är det en del som innehåller flera små artiklar-->
+            <div class="column">
+            <div class="headline card_headline">
                 <span></span>
                 <button type="button">Recent</button>
             </div>
+            <!--Kallade alla dessa för card eftersom de ska se likadana ut-->
             <div class="card card2">
+                <!--Card content är vad artikel innehåller-->
                 <div class="card_content">Which CPU is the current best right now?</div>
-                <div class="card_hero"><img src="/img/cpu.jpg" alt="" class="card_img"></div>
+                <div class="card_hero"><img src="/img/cpu.jpg" alt="Cpu_img" class="card_img"></div>
                 <span></span>
             </div>
             <div class="card card3">
                 <div class="card_content">Apple fans are not satisfied with the new iphone 15</div>
-                <div class="card_hero"><img class="card_img"src="/img/iphone2.jpg" alt=""></div>
+                <div class="card_hero"><img class="card_img"src="/img/iphone2.jpg" alt="Iphone_img"></div>
                 <span></span>
             </div>
             <div class="card card4">
                 <div class="card_content">GameStop is offically dead as ps5 moves to a digital world</div>
-                <div class="card_hero"><img class="card_img"src="/img/apple.jpg" alt=""></div>
+                <div class="card_hero"><img class="card_img"src="/img/apple.jpg" alt="Apple_logo_img"></div>
                 <span></span>
-            </div>
+            </div>    
         </div>
     </div>
-    <div class="headline headline2">
-        <span id="headline2_span"></span>
-        <button type="button">Recent</button>
-    </div>
-    <div class="row row2">
-        <div class="row2_card row2_card1">
-            <img src="/img/bitcoin.jpg" alt="">
-            <h3>Bitcoin prices continue <br> to drop</h3>
-            <p>- Parvid</p>
-        </div>
-        <div class="row2_card row2_card2">
-            <img src="/img/construction.jpg" alt="">
-            <h3>Construction worker will <br> no longer be needed!</h3>
-            <p>-Erfan</p>
-        </div>
-        <div class="row2_card row2_card3">
-            <img src="/img/iphone2.jpg" alt="">
-            <h3>New Iphone Has Been Released</h3>
-            <p>-Edvin</p>
-        </div>
-        <div class="row2_card row2_card4">
-            <img src="/img/factory.jpg" alt="">
-            <h3>China continues to home <br> many tech factories</h3>
-            <p>-Vile</p>
-        </div>
-    </div>
-</section>
-
-    <!-- section 2 -->
-    <section class="section2">
-        <div class="headline headline3">
-            <span id="headline3_span"></span>
-            <button type="button">Older articles</button>
-        </div>
-        <div class="wrapper">
-            <div class="card section2_card">
-                <div class="section2_content">Which CPU is the current best right now?</div>
-                <div class="card_hero"><img src="/img/cpu.jpg" alt="" class="section2_img"></div>
-                <span section2_span></span>
-            </div>
-            <div class="card section2_card">
-                <div class="section2_content">Apple fans are not satisfied with the new iphone 15</div>
-                <div class="card_hero"><img class="section2_img"src="/img/iphone2.jpg" alt=""></div>
-                <span section2_span></span>
-            </div>
-            <div class="card section2_card">
-                <div class="section2_content">GameStop is offically dead as ps5 moves to a digital world</div>
-                <div class="card_hero"><img class="section2_img"src="/img/apple.jpg" alt=""></div>
-                <span class="section2_span"></span>
-            </div>
-            <div class="card section2_card">
-                <div class="section2_content">GameStop is offically dead as ps5 moves to a digital world</div>
-                <div class="card_hero"><img class="section2_img"src="/img/apple.jpg" alt=""></div>
-                <span class="section2_span"></span>
-            </div>
-        </div>
-    </section>
-    <!-- section 3 -->
-<footer class="footer">
-    <section class="section3">
-            <div class="ft" id="ft1">
-                <div class="company_data">
-                <ul>
-                <li><a href="/index.html"> <h2 class="logo_footer">TechTrek</h2> </a></li>
-    
-                <li><p> Your Hub for Tech News, Reviews, and Guides.<br> Stay informed, make informed choices.</p></li>
-
-            <li><div class="list_items">
-                <ul class="list social_media">
-                    <li><a href="https://www.instagram.com/erfan_rah1/" target="_blank"><img src="/img/instagram.png" alt="instagram"> :instagram</a></li>
-                    <li><a href="#"><img src="/img/facebook.png" alt="facebook">:facebook </a></li>
-                    <li><a href="#"><img src="/img/pinterest.png" alt="pinterest">:pinterest </a></li>
-                </ul>
-            </div></li>
-
-                </ul>
-            </div>
-            </div>
-            <div class="ft" id="ft2">
-                <div class="ft_head kundservice">
-                    <ul>
-                <li><h3>Kundservice</h3></li>
-                <li><div class="ft_info contact_info">
-                    <ul>
-                        <li><p>📞: +0769466602 </p></li>
-                        <li>✉:<a href=""> TechTrek@gmail.com</a></li>
-                        <li>Adress:<a href=""> NTI Johanneberg</a></li>
-                    </ul>
-                </div></li>
-                </ul>
+    <!--Här är andra raden inom section1-->
+        <div class="row row2">
+            <!--Valde att kalla dessa för row2_card eftersom de skiljer sig åt från andra korten-->
+            <div class="row2_card row2_card1">
+                <img src="/img/bitcoin.jpg" alt="bitcoin_img">
+                <h3>Bitcoin prices continue <br> to drop</h3>
+                <!--Författaren-->
+                <p>- Parvid</p>
+                <!--En arrow logga från google icons-->
+                <div class="arrow_back">
+                    <i class="material-icons">arrow_back_ios</i>
                 </div>
             </div>
-            <div class="ft" id="ft3">
-                <div class="ft_head This_is_TechTrek">
+            <div class="row2_card row2_card2">
+                <img src="/img/construction.jpg" alt="Construction_img">
+                <h3>Construction worker will <br> no longer be needed!</h3>
+                <p>-Erfan</p>
+            </div>
+            <div class="row2_card row2_card3">
+                <img src="/img/iphone2.jpg" alt="">
+                <h3>New Iphone Has Been Released</h3>
+                <p>-Edvin</p>
+            </div>
+            <div class="row2_card row2_card4">
+                <img src="/img/factory.jpg" alt="">
+                <h3>China continues to home <br> many tech factories</h3>
+                <p>-Vile</p>
+                <!--En arrow logga från google icons-->
+            <div class="arrow_forward">
+                <i class="material-icons">arrow_forward_ios</i>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!--Här börjar section2-->
+        <section class="section2">
+            <!--Har skrivit två gånger men vågar inte ta bort!-->
+            <section class="section2">
+                <div class="headline headline3">
+                    <span id="headline3_span"></span>
+                    <button type="button">Older articles</button>
+                </div>
+                <!--Valde att ha med wrapper för dessa kort så att jag kunde flytta runt dem-->
+                <div class="wrapper">
+                    <!--Lik de första kort artiklarna, därför heter dem också card-->
+                    <div class="card section2_card">
+                        <div class="section2_content">Which CPU is the current best right now?</div>
+                        <div class="card_hero"><img src="/img/cpu.jpg" alt="" class="section2_img"></div>
+                        <!--Har gett denna span en class eftersom den är lite längre än andra-->
+                        <span id="section2_span"></span>
+                    </div>
+                    <div class="card section2_card">
+                        <div class="section2_content">Apple fans are not satisfied with the new iphone 15</div>
+                        <div class="card_hero"><img class="section2_img"src="/img/iphone2.jpg" alt=""></div>
+                        <span id="section2_span"></span>
+                    </div>
+                    <div class="card section2_card">
+                        <div class="section2_content">GameStop is offically dead as ps5 moves to a digital world</div>
+                        <div class="card_hero"><img class="section2_img"src="/img/apple.jpg" alt=""></div>
+                        <span id="section2_span"></span>
+                    </div>
+                    <div class="card section2_card">
+                        <div class="section2_content">GameStop is offically dead as ps5 moves to a digital world</div>
+                        <div class="card_hero"><img class="section2_img"src="/img/apple.jpg" alt=""></div>
+                        <span id="section2_span"></span>
+                    </div>
+                </div>
+            </section>
+            <!--En arrow neråt ikon från google icons-->
+            <div class="expand">
+            <i class="material-icons">expand_more</i>
+            </div>
+        </section>
+        <!--Här börjar section3, Detta är bara footern-->
+        <section class="section3">
+            <footer>
+            <!--Sociala media ikoner som jag fick från CDNJS-->
+                <div class="socialicons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+                <!--Detta är alla länkar som företagen har-->
+                <div class="footernav">
                     <ul>
-                <li><h3>This is TechTrek</h3></li>
-                <li><div class="ft_info TechTrek_info">
-                    <ul>
-                        <li><a href="#">History</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="#">About us</a></li>
-                        <li><a href="">Mission</a></li>
-                        <li><a href="">Group</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Jobs</a></li>
                     </ul>
-                </div></li>
-            </ul>
-            </div>
                 </div>
-            <div class="ft" id="ft4">
-                <div class="ft_head Jobb">
-                    <ul>
-                <li><h3>Jobb</h3></li>
-                <li><div class="ft_info Jobb_info">
-                    <ul>
-                        <li><a href="#">Free roles</a></li>
-                        <li><a href="#">Salary</a></li>
-                        <li><a href="">Pay</a></li>
-                    </ul>
-                </div></li>
-            </ul>
-            </div>
+                <!--Företags copywrite-->
+                <div class="copywrite">
+                    <p>Copyright &copy;2023 Designed by <span class="designer">TechTrek</span></p>
                 </div>
-    </section>
-    </footer>
-</div>
+            </footer>
+        </section>
+    </div>
 </body>
 </html>

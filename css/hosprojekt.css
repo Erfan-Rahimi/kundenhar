@@ -1,3 +1,4 @@
+/* universal selector */
 *{
     margin: 0;
     padding: 0;
@@ -9,20 +10,34 @@
     text-decoration: none;
 }
 
+/* Jag fixade färgtoner på alla sidans bilder så att de kunde passa till sidan men även till varandra */
+
+img{
+    filter: brightness(80%) sepia(18%) hue-rotate(15deg); 
+}
+
+/* Stamm saker, här valde jag att ha min main färg inom stammen */
+
 :root{
     --primary-background-color: #2980b9;
 }
 
+
+/* Valde lite globala stilar */
 html{
     font-size: 90% ;
     overflow-x: hidden;
 }
 
+/* Body som kan redigera bilder, texter och dylik */
 
 body{
-    background-color:  #2980b9;
-    letter-spacing: 1px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
+
+/* Header-wrapper för alla tre html sidor */
 
 .header-wrapper{
     height: 60px;
@@ -32,22 +47,33 @@ body{
     padding: 0 1rem;
 }
 
+/* Spred runt nav länkarna */
+
 nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/* Tog bort text decorations som tillåter en att redigera texten själv. */
+
 nav a{
     text-decoration: none;
     color: #2980b9;
-    transition: 0.2s;
     font-size: 15px; 
 }
 
+/* Hover effekter till navigationen. Generellt: Hover är ett tillstånd 
+när muspekarn är över ett element, i detta fall var det link som med det kan man
+aktivera några stilar. Transition används som en animation, det väljer ett tid
+där färgen övergår till goldenrod */
+
 nav a:hover{
     color: goldenrod;
+    transition: 0.5s;
 }
+
+/* Skapade knappen till navigationen */
 
 nav a button{
     font-size: 16px;
@@ -64,11 +90,15 @@ nav a button:hover{
     background-color: goldenrod;
 }
 
+/* Fixar logga headern */
+
 .logo{
     padding-left: 1rem;
     align-items: center;
     padding-top: 20px;
 }
+
+/* Redigerade och justerade logga bilden */
 
 .logo img{
     border-radius: 200px;
@@ -76,7 +106,16 @@ nav a button:hover{
     transform: translate(0%,-20%);
 }
 
+/* Container till index sidan. Använde css grid med calc height men det visade sig senare att det inte behövdes
+Valde även att lägga till ett bakgrundsbild plus en gradient som täcker över den bilden och detta
+ger en kol effekt som ger lite liv till sidan. Valde även att gradiantenten skulle gå från main color som jag 
+konverterade från HEX till rgb */
+
 .container{
+    background: linear-gradient(rgba(41,128,185,0.9), rgba(4, 18, 93, 0.9)), url(/img/circuit.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
     width: 100%;
     height: calc(100vh - 60px);
@@ -86,6 +125,10 @@ nav a button:hover{
     'slide-1 as'
     ;
 }
+
+
+/* Bannern, alltså bilder som animeras inom index sidan. Tog endast border radius på 
+toppen och botten av högra sidan vilket gav det den kola stilen som visas */
 
  .banner-1{
     grid-area: slide-1;
@@ -139,6 +182,8 @@ nav a button:hover{
     box-shadow:  15px 32px 64px rgba(0, 0, 0, 0.8);
 }
 
+/* Banner animation */
+
 .banner-1{
     animation: slide1 12s linear infinite;
 }
@@ -154,6 +199,9 @@ nav a button:hover{
 .banner-4{
     animation: slide4 12s linear infinite;
 }
+
+/* Bestämmer vad som ska vara synlgt eller inte under animationen*/
+
 @keyframes slide1{
     0%{
         visibility: visible;
@@ -224,7 +272,7 @@ nav a button:hover{
 }
 
 
-
+/* Aside information till Index html */
 
 aside{
     grid-area: as;
@@ -248,6 +296,8 @@ aside h1{
     color: #fff;
 }
 
+/* Skapade även en knapp till aside */
+
 aside button{
     width: 180px;
     color: #000;
@@ -263,6 +313,9 @@ aside button{
     margin-left: 33.2%;
     box-shadow: 6px 6px 9px  rgb(0, 0, 0);
 }
+
+/* Gjorde i princip ett animation med hover. Ändrar bara breden av knappen när¨
+muspekaren är på den  */
 
 aside button:hover{
     cursor: pointer;
@@ -285,6 +338,9 @@ aside button:hover img{
     display: block;
 }
 
+/* Span kan man använda för att belysa eller understrycka vissa texter och delar
+vilket gör sidan snyggare och mer tydligt */
+
 .aside span{
     background-color: goldenrod;
     height: 5px;
@@ -294,12 +350,23 @@ aside button:hover img{
     border-radius: 10px;
 } 
 
-/*Here starts the news page*/
+/*HÄR BÖRJAR NYHETS HTML*/
+
+/* Använde css grid med min-height 100vh som egentligen tillåter sidan att 
+strecka om det behövs men det funkar inte alltid och man måste justera med hjälp av 
+grid-template-rows eller columns */
 
 .container2{
+    background: linear-gradient(rgba(41,128,185,0.9), rgba(4, 18, 93, 0.9)), url(/img/circuit.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
     width: 100%;
-    height: calc(100vh - 50px);
+    min-height: 100vh;
     display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 35vh ;
     grid-template-areas: 
     'section1'
     'section2'
@@ -307,16 +374,27 @@ aside button:hover img{
     ;
 }
 
-.section1{
-    display: grid;
-    min-height: 100vh;
+/* Väljer storlek till alla section klasser */
+
+section{
     width: 100%;
+    min-height: 100vh;
+}
+
+/* Section1 var indelade i två stycken rows */
+
+.section1{
+    grid-area: section1;
+    display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: 60% 40%;
-    grid-template-areas:
+    grid-template-areas: 
     'row1'
     'row2'
     ;
 }
+
+/* Row 1 var ytterligare delade i två kolumns*/
 
 .row1{
     display: grid;
@@ -326,6 +404,8 @@ aside button:hover img{
     'card1 column2'
     ;
 }
+
+/* Väljer storlek och färg till alla card klasser */
 
 .card{
     /* background-color: rgba(240, 234, 234, 0.42); */
@@ -338,7 +418,7 @@ aside button:hover img{
     color: #fff;
 }
 
-
+/* Alla card klasser haden en tunn span under sig */
 
 .card span{
     background-color: rgba(240, 234, 234, 0.42);
@@ -350,21 +430,36 @@ aside button:hover img{
     transform: translate(0, 110px);
 }
 
+/* Valde storlek till alla card klasser, men även transform translate 
+som tillåter en att flytta runt bilden */
+
+.card_img{
+    display: block;
+    width: 150px;
+    border-radius: 4px;
+    transform: translate(70%);
+    box-shadow: -15px 6px 19px  #111c22;
+}
+
+/* Information om kortets artikel */
+
+.card_hero{
+    flex: 0 0 50%;
+    position: relative;
+}
+
+.card_content{
+    flex: 1;
+    padding: 10px 35px 20px 10px;
+}
+
+/* Headline till olika delar. Det finns healine och headline2 som är olika. Headline2 är för row2 */
+
 .headline{
     height: 50px;
     transform: translate(0%, 50%);
     color: #fff;
     margin: 20px;
-}
-
-.headline2{
-    transform: translate(-0.5%,-260%);
-    width: ;
-}
-
-#headline2_span{
-    width: 1115px;
-    transform: translate(2%,0%);
 }
 
 .headline span{
@@ -376,6 +471,8 @@ aside button:hover img{
     border-radius: 10px;
 }
 
+/* Är egentligen inte en knapp utan bara en rektangel som jag använde för att placera headline texten i */
+
 .headline button{
     background-color: goldenrod;
     color: #fff;
@@ -386,20 +483,19 @@ aside button:hover img{
     font-size: 15px;
 }
 
-.card_hero{
-    flex: 0 0 50%;
-    position: relative;
+.headline2{
+    transform: translate(-0.5%,-260%);
 }
 
-.card_img{
-    display: block;
-    width: 150px;
-    border-radius: 4px;
-    transform: translate(70%);
-    box-shadow: -15px 6px 19px  #111c22;
+#headline2_span{
+    width: 1115px;
+    transform: translate(2%,0%);
 }
 
-.card1_img{
+/* Card1 är den stora bilden, den är unik i jämförelse med card */
+
+
+.card1 img{
     display: block;
     width: 520px;
     border-radius: 5px;
@@ -407,7 +503,9 @@ aside button:hover img{
     box-shadow: -15px 6px 19px  #111c22;
 }
 
-.card_layer{
+/* En mörk och svart lager som gör bilden snyggare. */
+
+.card1_layer{
     display: flex;
     flex-direction: row;
     width: 520.2px;
@@ -425,11 +523,6 @@ aside button:hover img{
 
 .card_layer h4:hover{
     color: goldenrod;
-}
-
-.card_content{
-    flex: 1;
-    padding: 10px 35px 20px 10px;
 }
 
 .card1 button{
@@ -451,6 +544,8 @@ aside button:hover img{
     border-radius: 10px;
 }
 
+/* Här börjar andra raden inom section1 */
+
 .row2{
     grid-area:row2;
     display: flex;
@@ -458,8 +553,10 @@ aside button:hover img{
     justify-content: center;
     flex-direction: row;
     align-items: flex-end;
-    margin-top: 450px;
 }
+
+/* korten för row2 */
+
 
 .row2_card{
     display: flex;
@@ -484,19 +581,40 @@ aside button:hover img{
     box-shadow: -15px 6px 19px  #111c22;
 }
 
-/* här börjar section2 */
+.headline2{
+    padding-bottom: 75px;
+}
+
+/* Fixade placeringen för båda arrow ikoner som visas på row2 */
+
+.arrow_back{
+    transform: translate(-200%,-600%);
+}
+
+.arrow_forward{
+    transform: translate(1100%,-600%);
+}
+
+/* Section2 börjar här */
+/* Section2 har egentligen samma korter som column i row1 inom section1
+därför finns det inte mycket */
+
 
 .section2{
     grid-area: section2;
-    height: 180vh;
+    height: 150vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+#section2_span{
+    width: 600px;
+}
+
 .headline3{
-    transform: translate(-0.5%,460%);
+    transform: translate(-0.5%,0%);
 }
 
 #headline3_span{
@@ -504,9 +622,14 @@ aside button:hover img{
     transform: translate(2%,0%);
 }
 
+/* Wrapper som jag använde bara för att flytta ner section2 korter lite gran */
+
 .wrapper{
-    padding-top: 220px;
+    padding-top: 20px;
 }
+
+/* ändrade endast storleken på bilderna men även storleken på själva korten 
+för section2 men annars är det exakt samma som section1 */
 
 .section2_img{
     display: block;
@@ -529,84 +652,110 @@ aside button:hover img{
     color: #fff;
 }
 
+/* fixade placering för arrow neråt, alltså en expand arrow som var till section2 */
+
+.expand{
+    color: white;
+    transform: translate(1300%,-250%);
+}
+
+/* section3 eller footer börjar här */
+
 .section3{
-    background-color: #0d293cdb;
-    height: 40vh;
+    background-color: white;
+}
+
+/* footer är en barn till section3 och därför kan man endast
+redigera padding via footer */
+
+footer{
     width: 100%;
-    grid-area: section3;
-    color: #2980b9;
-    background-color: #fff;
-    display: grid;
-    grid-template-columns: 40% 20% 20% 20%;
-    grid-area:
-    'ft1 ft2 ft3 ft4'
-    ;
+    padding: 10px 30px 20px;
 }
 
-.ft{
-    padding-block: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+/* Display layouten för sociala medie ikoner i footern men en fin animation
+som byter färger  */
 
-.company_data ul{
-    list-style: none;
+.socialicons{
     display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    justify-content: center;
 }
 
-.list_items ul{
+.socialicons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--primary-background-color);
+    margin: 10px;
+    border-radius: 100%;
+}
+
+/* redigerade storleken för socialamedie ikonerna  */
+
+
+.socialicons a i{
+    font-size: 2em;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.socialicons a:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.socialicons a:hover i{
+    color: goldenrod;
+    transition: 0.2s;
+}
+
+/* Alla länker som visas inom footern */
+
+.footernav{
+    margin: 30px 0;
+}
+
+.footernav ul{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     list-style: none;
-    row-gap: 0;
 }
 
-.list_items ul a:hover{
+.footernav ul li a{
+    color: var(--primary-background-color);
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.footernav ul li a:hover{
+    opacity: 1;
     color: goldenrod;
 }
 
+/* Copywrite för footern  */
 
-.list_items img{
-    width: 25px;
-    transform: translate(0%,30%);
-    padding-top: 5px;
-}
-
-.ft_head ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-}
-
-
-.ft_info ul{
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    list-style: none;
-}
-
-.TechTrek_info ul{
-    row-gap: 20px;
-}
-
-.Jobb_info ul{
-    row-gap: 10px;
-}
-
-.footer a{
+.copywrite{
+    padding: 0px 470px 0px;
     color: var(--primary-background-color);
 }
 
-/* Here begins the last page */
+
+/* Här börjar review sidan */
+
 
 .container3{
+    background: linear-gradient(rgba(41,128,185,0.9), rgba(4, 18, 93, 0.9)), url(/img/circuit.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
     width: 100%;
-    height: calc(100vh - 50px);
+    min-height: 100vh;
     display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh auto auto 40vh;
     grid-template-areas: 
     'section4'
     'section5'
@@ -615,18 +764,262 @@ aside button:hover img{
     ;
 }
 
-section{
-    min-height: 20vh;
-}
-
-.section3 a{
-    color: var(--primary-background-color);
-}
+/* gjorde en liknande layout till row2 i newshtml sidan men med ett annat 
+kort. Detta är för alla senaste reviewsen*/
 
 .section4{
+    grid-area: section4;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.box
+/* Titeln för alla senaste reviews */
+
+.section4 h1{
+    font-size:  50px; 
+    color: #fff;
+    padding-bottom: 60px;
+}
+
+.section4 img{
+    width: 250px;
+}
+
+.review_cards{
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+}
+
+.review_card{
+    display: flex;
+    background-color: #cccccc;
+    flex-direction: column;
+    height: 200px;
+    max-width: 1000px;
+    margin-right: 40px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    font-size: 20px;
+}
+
+/* Samma piler som row2 i news.html */
+
+.review_back{
+    transform: translate(-80%,50%);
+    color: #fff;
+}
+
+/* Samma piler som row2 i news.html*/
+
+
+.review_forward{
+    transform: translate(-70%,50%);
+    color: #fff;
+}
+
+/* Här börjar section5 */
+
+.section5{
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    'aside2_title aside2_title' 
+    'as mn'
+    ;
+}
+
+/* Rubriken till recommended products*/
+
+.aside2_title{
+    display: flex;
+    align-items: center;
+    grid-area: aside2_title;
+    color: #fff;
+    font-size: 50px;
+}
+
+/* använde klass aside2 eftersom aside var redan använd i index.html 
+Detta visar alla kategorier för alla typer av produkter*/
+
+.aside2{
+    grid-area:  as;
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Sorterade och fixade länkarna till aside länkarna */
+
+.aside2 ul li{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.aside2 li:hover{
+    font-size: 35px;
+    transition: 0.5s;
+    color: goldenrod;
+}
+
+.aside2 span{
+    background-color: rgba(240, 234, 234, 0.42);
+    height: 1px;
+    width: 250px;
+    position: absolute;
+    margin-left: 14%;
+    border-radius: 10px;
+    transform: translate(-65%,80%);
+}
+
+/* Här är main till alla korten för rekomenderade och icke rekomenderade 
+produkter */
+
+
+.main_cards{
+    grid-area: mn;
+    height: 250px;
+    max-width: 1000px;
+    margin-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* main_card är alla individa korter */
+
+.main_card{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+}
+
+.main_cards img{
+    width: 100%;
+    display: block;
+    border-radius: 1px;
+}
+
+/* Detta är tumme och och länken inom korten */
+
+.card__content{
+    line-height: 1.5;
+    font-size: 0.9em;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 1px;
+}
+
+/* Tar bort onödigt margin */
+
+.card__content> p:first-of-type{
+    margin-top: 0;
+}
+
+.card__content> p:first-of-type{
+    margin-bottom: 0;
+}
+
+/* Allt text som är om reviewn */
+
+.card__info{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    font-size: 0.8em;
+    border-bottom: 2px solid #cccccc;
+    border-radius: 1px;
+}
+
+.card__info p{
+    font-size: 12px;
+}
+
+/* Sätter en cursor pointer på alla importerade ikoner */
+
+.material-icons{
+    cursor: pointer;
+}
+
+/* Här börjar section6 som är samma sak som section 5 */
+
+.section6{
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+    'aside2_title aside2_title' 
+    'as mn'
+    ;
+}
+
+.main_cards2{
+    grid-area: mn;
+    height: 250px;
+    max-width: 1000px;
+    margin-right: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.main_card2{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+}
+
+.main_cards2 img{
+    width: 100%;
+    display: block;
+    border-radius: 1px;
+}
+
+.aside2_title{
+    display: flex;
+    align-items: center;
+    grid-area: aside2_title;
+    color: #fff;
+    font-size: 50px;
+}
+
+.aside2{
+    grid-area:  as;
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.aside2 li:hover{
+    font-size: 35px;
+    transition: 0.5s;
+    color: goldenrod;
+}
+
+.aside2 span{
+    background-color: rgba(240, 234, 234, 0.42);
+    height: 1px;
+    width: 250px;
+    position: absolute;
+    margin-left: 14%;
+    border-radius: 10px;
+    transform: translate(-65%,80%);
+}
+
+.aside2 ul li{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    list-style: none;
+    padding-left: 20px;
+}
