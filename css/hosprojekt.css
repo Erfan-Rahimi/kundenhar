@@ -327,11 +327,6 @@ aside button:hover img{
     ;
 }
 
-.column{
-    display: flex;
-    flex-direction: column;
-}
-
 .card{
     /* background-color: rgba(240, 234, 234, 0.42); */
     width: 450px;
@@ -363,11 +358,13 @@ aside button:hover img{
 }
 
 .headline2{
-    transform: translate(-0.5%,-220%);
+    transform: translate(-0.5%,-260%);
+    width: ;
 }
 
 #headline2_span{
-    width: 555px;
+    width: 1115px;
+    transform: translate(2%,0%);
 }
 
 .headline span{
@@ -405,7 +402,7 @@ aside button:hover img{
 .card1_img{
     display: block;
     width: 520px;
-    border-radius: 10px;
+    border-radius: 5px;
     transform: translate(20%,0%);
     box-shadow: -15px 6px 19px  #111c22;
 }
@@ -418,7 +415,7 @@ aside button:hover img{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(19, 18, 18, 0.8), rgba(0, 0, 0));
     transform: translate(20%, -100%);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .card_layer h4{
@@ -461,39 +458,175 @@ aside button:hover img{
     justify-content: center;
     flex-direction: row;
     align-items: flex-end;
-    margin-top: 480px;
+    margin-top: 450px;
 }
 
 .row2_card{
     display: flex;
     flex-direction: column;
     height: 280px;
-    align-items: center;
-    border-radius: 20px;
+    align-items: flex-start;
+    border-radius: 1px;
     color: #fff;
+    width: 250px;
 }
 
 .row2_card h3{
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .row2_card img{
     width: 250px;
     height: 160px;
-    border-radius: 20px;
+    border-radius: 0px;
     margin-bottom: 20px;
     box-shadow: -15px 6px 19px  #111c22;
 }
 
+/* här börjar section2 */
 
 .section2{
     grid-area: section2;
-    min-height: 100vh;
+    height: 180vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.headline3{
+    transform: translate(-0.5%,460%);
+}
+
+#headline3_span{
+    width: 1115px;
+    transform: translate(2%,0%);
+}
+
+.wrapper{
+    padding-top: 220px;
+}
+
+.section2_img{
+    display: block;
+    width: 200px;
+    border-radius: 4px;
+    transform: translate(0%, -30%);
+    box-shadow: -15px 6px 19px  #111c22;
+}
+
+.section2_content{
+    flex: 1;
+    padding: 10px 10px 20px 10px;
+}
+
+.section2_card{
+    width: 800px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
 }
 
 .section3{
-    grid-area: section3;
-    min-height: 100vh;
+    background-color: #0d293cdb;
+    height: 40vh;
     width: 100%;
+    grid-area: section3;
+    color: #2980b9;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    grid-area:
+    'ft1 ft2 ft3 ft4'
+    ;
 }
+
+.ft{
+    padding-block: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.company_data ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.list_items ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 0;
+}
+
+.list_items ul a:hover{
+    color: goldenrod;
+}
+
+
+.list_items img{
+    width: 25px;
+    transform: translate(0%,30%);
+    padding-top: 5px;
+}
+
+.ft_head ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+
+.ft_info ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    list-style: none;
+}
+
+.TechTrek_info ul{
+    row-gap: 20px;
+}
+
+.Jobb_info ul{
+    row-gap: 10px;
+}
+
+.footer a{
+    color: var(--primary-background-color);
+}
+
+/* Here begins the last page */
+
+.container3{
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: grid;
+    grid-template-areas: 
+    'section4'
+    'section5'
+    'section6'
+    'section3'
+    ;
+}
+
+section{
+    min-height: 20vh;
+}
+
+.section3 a{
+    color: var(--primary-background-color);
+}
+
+.section4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
